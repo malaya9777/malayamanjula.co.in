@@ -16,6 +16,7 @@
             padding: 0;
             font-family: 'Roboto', sans-serif;
         }
+
         body {
             background-color: rgb(235, 239, 242);
         }
@@ -32,20 +33,24 @@
         }
 
         .logo {
-            height: 150px;
-            width: 150px;
+            padding: 10px;
             transform: rotate(10deg);
         }
 
         .companyImage {
-            margin: auto 10px auto 10px;
-            padding: 20px;
-            font-size: 35px;
+            margin: auto 10px auto 5px;
+            padding: 20px 0px 20px 0px;
+            font-size: 25px;
+            cursor: pointer;
             color: rgb(17, 121, 252);
         }
 
             .companyImage > p > span {
                 font-weight: bolder;
+            }
+
+            .companyImage > p:hover > span {
+                animation: ToBlack 1s ease-in-out forwards;
             }
 
         .navigation {
@@ -82,35 +87,99 @@
         }
 
         .footer {
+            position: relative;
             height: 150px;
             background-color: rgb(46, 46, 46);
             padding: 5px 0px 5px 0px;
         }
 
-            .footer > .companyLogo {
+            .footer > .footer_companyLogo {
                 margin: 5px auto 8px auto;
                 height: 30px;
                 width: 30px;
+                transform: rotate(10deg)
             }
 
-            .footer > .companyImage {
-                background-color: #fff;
+            .footer > .footer_companyImage {
                 width: 200px;
-                height: 10px !important;
                 margin: 5px auto 5px auto;
+                padding-bottom: 7px;
+                text-align: center;
+                border-bottom: solid 2px rgba(255, 255, 255, 0.67);
+                color: rgba(255, 255, 255, 0.67);
+                cursor: pointer;
             }
 
-                .footer > .companyImage > p {
-                   
-                        all:unset;
+                .footer > .footer_companyImage > p > span {
+                    font-weight: bolder;
                 }
 
-            .footer > .socialMedia {
+                .footer > .footer_companyImage > p:hover > span {
+                    animation: ToBlue 1s ease-in-out forwards;
+                }
+
+
+
+
+            .footer > .footer_socialMedia {
                 width: 200px;
                 height: 30px;
+                text-align: center;
                 margin: 0px auto 5px auto;
-                background-color: #fff;
+                color: rgba(255, 255, 255, 0.67);
+                font-size: 20px;
             }
+
+                .footer > .footer_socialMedia > i {
+                    padding: 10px;
+                    cursor: pointer;
+                }
+
+            .footer > .footer_copyrights {
+                position: absolute;
+                bottom: 0;
+                display:flex;
+                background-color: rgb(25, 25, 25);
+                padding: 9px 0px;
+                width: 100%;
+                color: rgba(255, 255, 255, 0.67);
+                font-size: 14px;
+            }
+
+
+                .footer > .footer_copyrights > p {
+                    margin: 0px 10px;
+                }
+
+                    .footer > .footer_copyrights > p > div {
+                        display: flex;
+                        margin-left: auto;
+                        width: 300px;
+                    }
+
+
+        .footer_links {
+            width:210px;
+            margin-left:auto;
+
+        }
+
+            .footer_links > a {
+                text-decoration: none;
+                color: rgba(255, 255, 255, 0.67);
+            }
+
+        @keyframes ToBlue {
+            to {
+                color: rgb(17, 121, 252);
+            }
+        }
+
+        @keyframes ToBlack {
+            to {
+                color: rgb(9, 15, 35);
+            }
+        }
     </style>
 
 </head>
@@ -119,26 +188,26 @@
         <div class="container">
             <div class="header">
                 <div class="logo">
-                    <img src="Images/Logos/1.png" height="150" width="150" alt="Logo" />
+                    <img src="Images/Logos/1.png" height="120" width="120" alt="Logo" />
                 </div>
                 <div class="companyImage">
                     <p><span>Malaya</span>Manjula.Co.IN</p>
                 </div>
                 <div class="navigation">
                     <div class="nav home" title="Navigate to Home.">
-                        <i class="fa fa-home fa-3x" aria-hidden="true"></i>
+                        <i class="fa fa-home fa-2x" aria-hidden="true"></i>
                         <p>Home</p>
                     </div>
                     <div class="nav works" title="See our works.">
-                        <i class="fa fa-code-fork fa-3x" aria-hidden="true"></i>
+                        <i class="fa fa-code-fork fa-2x" aria-hidden="true"></i>
                         <p>Works</p>
                     </div>
                     <div class="nav clients" title="Our clients.">
-                        <i class="fa fa-users fa-3x" aria-hidden="true"></i>
+                        <i class="fa fa-users fa-2x" aria-hidden="true"></i>
                         <p>Clients</p>
                     </div>
-                    <div class="nav contact">
-                        <i class="fa fa-phone-square fa-3x" aria-hidden="true"></i>
+                    <div class="nav contact" title="Connect with us">
+                        <i class="fa fa-phone-square fa-2x" aria-hidden="true"></i>
                         <p>Connect</p>
                     </div>
                 </div>
@@ -148,13 +217,21 @@
 
         </div>
         <div class="footer">
-            <div class="companyLogo">
+            <div class="footer_companyLogo">
                 <img src="Images/Logos/1.png" alt="logo" height="30" width="30" />
             </div>
-            <div class="companyImage">
+            <div class="footer_companyImage">
                 <p><span>Malaya</span>Manjula.Co.IN</p>
             </div>
-            <div class="socialMedia"></div>
+            <div class="footer_socialMedia">
+                <i class="fa fa-facebook-f"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-youtube"></i>
+            </div>
+            <div class="footer_copyrights">
+                <p>&#9400; All rights reserved by www.malayamanjula.co.in</p>
+                <div class="footer_links"><a href="#">About Us</a> | <a href="#">Services</a> | <a href="#">Contact US</a></div>
+            </div>
         </div>
     </form>
 </body>
