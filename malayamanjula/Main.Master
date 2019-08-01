@@ -1,0 +1,162 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="malayamanjula.Main" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background-color: rgb(235, 239, 242);
+        }
+
+        .header {
+            height: 150px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 10px auto 0px auto;
+        }
+
+        .logo {
+            height: 150px;
+            width: 150px;
+            transform: rotate(10deg);
+        }
+
+        .companyImage {
+            margin: auto 10px auto 10px;
+            padding: 20px;
+            font-size: 35px;
+            color: rgb(17, 121, 252);
+        }
+
+            .companyImage > p > span {
+                font-weight: bolder;
+            }
+
+        .navigation {
+            display: flex;
+            margin-left: auto;
+            height: 150px;
+            width: 500px;
+        }
+
+            .navigation > .nav {
+                padding: 25px;
+                width: 50px;
+                border-radius: 5px;
+                margin: auto 0px auto 10px;
+                cursor: pointer;
+                background-color: #fff;
+                text-align: center;
+            }
+
+        .nav.home {
+            color: rgb(255, 106, 0);
+        }
+
+        .nav.works {
+            color: rgb(0, 52, 255);
+        }
+
+        .nav.clients {
+            color: rgb(252, 89, 199);
+        }
+
+        .nav.contact {
+            color: rgb(117, 224, 108);
+        }
+
+        .footer {
+            height: 150px;
+            background-color: rgb(46, 46, 46);
+            padding: 5px 0px 5px 0px;
+        }
+
+            .footer > .companyLogo {
+                margin: 5px auto 8px auto;
+                height: 30px;
+                width: 30px;
+            }
+
+            .footer > .companyImage {
+                background-color: #fff;
+                width: 200px;
+                height: 10px !important;
+                margin: 5px auto 5px auto;
+            }
+
+                .footer > .companyImage > p {
+                   
+                        all:unset;
+                }
+
+            .footer > .socialMedia {
+                width: 200px;
+                height: 30px;
+                margin: 0px auto 5px auto;
+                background-color: #fff;
+            }
+    </style>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container">
+            <div class="header">
+                <div class="logo">
+                    <img src="Images/Logos/1.png" height="150" width="150" alt="Logo" />
+                </div>
+                <div class="companyImage">
+                    <p><span>Malaya</span>Manjula.Co.IN</p>
+                </div>
+                <div class="navigation">
+                    <div class="nav home" title="Navigate to Home.">
+                        <i class="fa fa-home fa-3x" aria-hidden="true"></i>
+                        <p>Home</p>
+                    </div>
+                    <div class="nav works" title="See our works.">
+                        <i class="fa fa-code-fork fa-3x" aria-hidden="true"></i>
+                        <p>Works</p>
+                    </div>
+                    <div class="nav clients" title="Our clients.">
+                        <i class="fa fa-users fa-3x" aria-hidden="true"></i>
+                        <p>Clients</p>
+                    </div>
+                    <div class="nav contact">
+                        <i class="fa fa-phone-square fa-3x" aria-hidden="true"></i>
+                        <p>Connect</p>
+                    </div>
+                </div>
+            </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+        </div>
+        <div class="footer">
+            <div class="companyLogo">
+                <img src="Images/Logos/1.png" alt="logo" height="30" width="30" />
+            </div>
+            <div class="companyImage">
+                <p><span>Malaya</span>Manjula.Co.IN</p>
+            </div>
+            <div class="socialMedia"></div>
+        </div>
+    </form>
+</body>
+</html>
