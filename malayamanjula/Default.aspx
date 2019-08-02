@@ -39,7 +39,7 @@
         }
 
             .welcome_message > .welcome {
-                font-size:60px;
+                font-size: 60px;
                 margin-bottom: 10px;
             }
 
@@ -51,40 +51,57 @@
         .designs {
             padding: 20px;
             display: grid;
-            grid-template-columns:repeat(3, 1fr);
-            grid-template-areas:"threeD graphic website";
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas: "threeD graphic website";
             grid-gap: 10px;
-            align-items:stretch;
+            align-items: stretch;
         }
 
         .box {
             position: relative;
             min-height: 200px;
             padding: 10px;
-            border-radius:3px;
-            color:#fff;
+            border-radius: 3px;
+            color: #fff;
         }
 
-            
-            .box.threed{
-                grid-area:threeD;
-                background-color:rgb(17, 72, 173);
+
+            .box.threed {
+                grid-area: threeD;
+                background-color: rgb(17, 72, 173);
             }
-            .box.graphics{
-                grid-area:graphic;
-                background-color:rgb(255, 106, 0);
+
+                .box.threed > i {
+                    font-size: 80px;
+                    padding: 10px;
+                }
+
+            .box.graphics {
+                grid-area: graphic;
+                background-color: rgb(255, 106, 0);
             }
-            .box.website{
-                grid-area:website;
-                background-color:rgb(5, 167, 33);
+
+                .box.graphics > i {
+                    font-size: 80px;
+                    padding: 10px;
+                }
+
+            .box.website {
+                grid-area: website;
+                background-color: rgb(5, 167, 33);
             }
-            .underConstruction{
-                margin:0px auto 0px auto;
-                text-align:center;
-                padding:100px 0px;
-                font-size:100px;
-                color:rgb(247, 80, 80);
-            }
+             .box.website > i {
+                    font-size: 80px;
+                    padding: 10px;
+                }
+
+        .underConstruction {
+            margin: 0px auto 0px auto;
+            text-align: center;
+            padding: 100px 0px;
+            font-size: 100px;
+            color: rgb(247, 80, 80);
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -103,18 +120,18 @@
     </div>
     <div id="designs" class="designs">
         <div class="box threed">
-            <img src="#" alt="" />
+            <i class="fa fa-cubes"></i>
             <p>Demand of 3d rendring, Concept making and and Product rendring is growing day by day. Because 3D have forms. It is not like painting, drawing, photographs.</p>
             <asp:Button ID="btnView3d" runat="server" Text="View" CssClass="btn btn-white" />
         </div>
         <div class="box graphics">
-            <img src="#" alt="" />
+            <i class="fa fa-paint-brush"></i>
             <p>Graphic design is the process of visual communication and problem-solving through the use of typography, photography, and illustration </p>
             <asp:Button ID="btnViewGraphics" runat="server" Text="View" CssClass="btn btn-white" />
 
         </div>
         <div class="box website">
-            <img src="#" alt="" />
+            <i class="fa fa-globe"></i>
             <p>Since the start of the 21st century the web has become more and more integrated into peoples lives. As this has happened the technology of the web has also moved on. There have also been significant changes in the way people use and access the web, and this has changed how sites are designed. </p>
             <asp:Button ID="btnViewWebDesigns" runat="server" Text="View" CssClass="btn btn-white" />
         </div>

@@ -50,7 +50,8 @@
             }
 
             .companyImage > p:hover > span {
-                animation: ToBlack 1s ease-in-out forwards;
+                transition: .8s;
+                color: rgb(9, 15, 35);
             }
 
         .navigation {
@@ -66,13 +67,21 @@
                 border-radius: 5px;
                 margin: auto 0px auto 10px;
                 cursor: pointer;
-                background-color: #fff;
+                transition: .5s;
                 text-align: center;
+                position: relative;
+                background-color: #fff;
             }
 
         .nav.home {
             color: rgb(255, 106, 0);
         }
+
+        .active {
+            background-color: rgb(17, 121, 252)!important;
+            color: #fff!important;
+        }
+            
 
         .nav.works {
             color: rgb(0, 52, 255);
@@ -84,6 +93,28 @@
 
         .nav.contact {
             color: rgb(117, 224, 108);
+        }
+
+        .nav::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 0%;
+            transition: .8s;
+            background-color: rgb(17, 121, 252);
+            top: 0;
+            border-radius: 5px 5px 50% 50%;
+            z-index: -1;
+        }
+
+        .nav:hover::before {
+            height: 100%;
+        }
+
+        .nav:hover {
+            color: #fff;
+            background-color: transparent;
         }
 
         .footer {
@@ -174,23 +205,26 @@
 
         /*Default style for all pages*/
         .btn {
-            margin:20px auto;
-            border:none;
+            margin: 20px auto;
+            border: none;
             border-radius: 3px;
-            padding:10px;
-            cursor:pointer;
+            padding: 10px;
+            cursor: pointer;
         }
-        .btn-default{
-            color:#fff;
-            background-color:rgb(17, 121, 252);
+
+        .btn-default {
+            color: #fff;
+            background-color: rgb(17, 121, 252);
         }
-        .btn-white{
-            color:rgb(17, 121, 252);
-            background-color:#fff;
+
+        .btn-white {
+            color: rgb(17, 121, 252);
+            background-color: #fff;
         }
-        .btn-md{
-            font-size:20px;
-            padding:20px;
+
+        .btn-md {
+            font-size: 20px;
+            padding: 20px;
         }
 
         @keyframes ToBlue {
@@ -218,7 +252,7 @@
                     <p><span>Malaya</span>Manjula.Co.IN</p>
                 </div>
                 <div class="navigation">
-                    <div class="nav home" title="Navigate to Home.">
+                    <div class="nav home active" title="Navigate to Home.">
                         <i class="fa fa-home fa-2x" aria-hidden="true"></i>
                         <p>Home</p>
                     </div>
