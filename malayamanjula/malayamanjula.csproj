@@ -58,7 +58,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\1154.png" />
+    <Content Include="Images\Logos\2.png" />
+    <Content Include="Images\Logos\myLogo.svg" />
     <Content Include="Main.Master" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -100,74 +100,98 @@
                 transform: rotate(10deg)
             }
 
-            .footer > .footer_companyImage {
-                width: 200px;
-                margin: 5px auto 5px auto;
-                padding-bottom: 7px;
-                text-align: center;
-                border-bottom: solid 2px rgba(255, 255, 255, 0.67);
-                color: rgba(255, 255, 255, 0.67);
+        .footer_companyLogo > svg > path {
+            fill: rgba(255, 255, 255, 0.67);
+        }
+
+        .footer > .footer_companyImage {
+            width: 200px;
+            margin: 5px auto 5px auto;
+            padding-bottom: 7px;
+            text-align: center;
+            border-bottom: solid 2px rgba(255, 255, 255, 0.67);
+            color: rgba(255, 255, 255, 0.67);
+            cursor: pointer;
+        }
+
+            .footer > .footer_companyImage > p > span {
+                font-weight: bolder;
+            }
+
+            .footer > .footer_companyImage > p:hover > span {
+                animation: ToBlue 1s ease-in-out forwards;
+            }
+
+
+
+
+        .footer > .footer_socialMedia {
+            width: 200px;
+            height: 30px;
+            text-align: center;
+            margin: 0px auto 5px auto;
+            color: rgba(255, 255, 255, 0.67);
+            font-size: 20px;
+        }
+
+            .footer > .footer_socialMedia > i {
+                padding: 10px;
                 cursor: pointer;
             }
 
-                .footer > .footer_companyImage > p > span {
-                    font-weight: bolder;
-                }
+        .footer > .footer_copyrights {
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            background-color: rgb(25, 25, 25);
+            padding: 9px 0px;
+            width: 100%;
+            color: rgba(255, 255, 255, 0.67);
+            font-size: 14px;
+        }
 
-                .footer > .footer_companyImage > p:hover > span {
-                    animation: ToBlue 1s ease-in-out forwards;
-                }
 
-
-
-
-            .footer > .footer_socialMedia {
-                width: 200px;
-                height: 30px;
-                text-align: center;
-                margin: 0px auto 5px auto;
-                color: rgba(255, 255, 255, 0.67);
-                font-size: 20px;
+            .footer > .footer_copyrights > p {
+                margin: 0px 10px;
             }
 
-                .footer > .footer_socialMedia > i {
-                    padding: 10px;
-                    cursor: pointer;
+                .footer > .footer_copyrights > p > div {
+                    display: flex;
+                    margin-left: auto;
+                    width: 300px;
                 }
-
-            .footer > .footer_copyrights {
-                position: absolute;
-                bottom: 0;
-                display:flex;
-                background-color: rgb(25, 25, 25);
-                padding: 9px 0px;
-                width: 100%;
-                color: rgba(255, 255, 255, 0.67);
-                font-size: 14px;
-            }
-
-
-                .footer > .footer_copyrights > p {
-                    margin: 0px 10px;
-                }
-
-                    .footer > .footer_copyrights > p > div {
-                        display: flex;
-                        margin-left: auto;
-                        width: 300px;
-                    }
 
 
         .footer_links {
-            width:210px;
-            margin-left:auto;
-
+            width: 210px;
+            margin-left: auto;
         }
 
             .footer_links > a {
                 text-decoration: none;
                 color: rgba(255, 255, 255, 0.67);
             }
+
+        /*Default style for all pages*/
+        .btn {
+            margin:20px auto;
+            border:none;
+            border-radius: 3px;
+            padding:10px;
+            cursor:pointer;
+        }
+        .btn-default{
+            color:#fff;
+            background-color:rgb(17, 121, 252);
+        }
+        .btn-white{
+            color:rgb(17, 121, 252);
+            background-color:#fff;
+        }
+        .btn-md{
+            font-size:20px;
+            padding:20px;
+        }
 
         @keyframes ToBlue {
             to {
@@ -218,7 +242,9 @@
         </div>
         <div class="footer">
             <div class="footer_companyLogo">
-                <img src="Images/Logos/1.png" alt="logo" height="30" width="30" />
+                <svg width="100%" height="100%" viewBox="0 0 301 301" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2;">
+                    <path d="M150.262,0c82.932,0 150.262,67.33 150.262,150.262c0,82.932 -67.33,150.262 -150.262,150.262c-82.932,0 -150.262,-67.33 -150.262,-150.262c0,-82.932 67.33,-150.262 150.262,-150.262Zm109.694,247.783l0,-195.042l-79.212,0l-30.349,118.675l-30.567,-118.675l-79.26,0l0,195.042l49.359,0l0,-148.743l37.961,148.743l44.678,0l38.031,-148.743l0,148.743l49.359,0Z" />
+                </svg>
             </div>
             <div class="footer_companyImage">
                 <p><span>Malaya</span>Manjula.Co.IN</p>
