@@ -62,6 +62,7 @@
     <Content Include="Images\Logos\2.png" />
     <Content Include="Images\Logos\myLogo.svg" />
     <Content Include="Main.Master" />
+    <Content Include="Works.aspx" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -91,6 +92,13 @@
       <DependentUpon>Main.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Works.aspx.cs">
+      <DependentUpon>Works.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Works.aspx.designer.cs">
+      <DependentUpon>Works.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

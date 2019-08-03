@@ -34,9 +34,27 @@
 
         .logo {
             padding: 10px;
+            width: 130px;
             transform: rotate(10deg);
         }
 
+            .logo > svg > path {
+                fill: rgb(17, 121, 252);
+                
+                animation:logoAnimation 5s infinite;
+            }
+            
+        @keyframes logoAnimation{
+            0%{
+                fill: rgb(17, 121, 252);
+            }
+            50%{
+                fill: rgb(11, 79, 165);
+            }
+            100%{
+                fill: rgb(17, 121, 252);
+            }
+        }
         .companyImage {
             margin: auto 10px auto 5px;
             padding: 20px 0px 20px 0px;
@@ -47,10 +65,10 @@
 
             .companyImage > p > span {
                 font-weight: bolder;
+                transition: 1s;
             }
 
             .companyImage > p:hover > span {
-                transition: .8s;
                 color: rgb(9, 15, 35);
             }
 
@@ -78,10 +96,10 @@
         }
 
         .active {
-            background-color: rgb(17, 121, 252)!important;
-            color: #fff!important;
+            background-color: rgb(17, 121, 252) !important;
+            color: #fff !important;
         }
-            
+
 
         .nav.works {
             color: rgb(0, 52, 255);
@@ -104,7 +122,7 @@
             transition: .8s;
             background-color: rgb(17, 121, 252);
             top: 0;
-            border-radius: 5px 5px 50% 50%;
+            border-radius: 5px 5px 10% 10%;
             z-index: -1;
         }
 
@@ -147,14 +165,12 @@
 
             .footer > .footer_companyImage > p > span {
                 font-weight: bolder;
+                transition: .8s;
             }
 
             .footer > .footer_companyImage > p:hover > span {
-                animation: ToBlue 1s ease-in-out forwards;
+                color: rgb(17, 121, 252);
             }
-
-
-
 
         .footer > .footer_socialMedia {
             width: 200px;
@@ -222,21 +238,15 @@
             background-color: #fff;
         }
 
+        .btn-round {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+
         .btn-md {
             font-size: 20px;
             padding: 20px;
-        }
-
-        @keyframes ToBlue {
-            to {
-                color: rgb(17, 121, 252);
-            }
-        }
-
-        @keyframes ToBlack {
-            to {
-                color: rgb(9, 15, 35);
-            }
         }
     </style>
 
@@ -246,7 +256,9 @@
         <div class="container">
             <div class="header">
                 <div class="logo">
-                    <img src="Images/Logos/1.png" height="120" width="120" alt="Logo" />
+                    <svg width="100%" height="100%" viewBox="0 0 301 301" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2;">
+                        <path d="M150.262,0c82.932,0 150.262,67.33 150.262,150.262c0,82.932 -67.33,150.262 -150.262,150.262c-82.932,0 -150.262,-67.33 -150.262,-150.262c0,-82.932 67.33,-150.262 150.262,-150.262Zm109.694,247.783l0,-195.042l-79.212,0l-30.349,118.675l-30.567,-118.675l-79.26,0l0,195.042l49.359,0l0,-148.743l37.961,148.743l44.678,0l38.031,-148.743l0,148.743l49.359,0Z" />
+                    </svg>
                 </div>
                 <div class="companyImage">
                     <p><span>Malaya</span>Manjula.Co.IN</p>

@@ -59,49 +59,39 @@
 
         .box {
             position: relative;
-            min-height: 200px;
+            min-height: 300px;
             padding: 10px;
             border-radius: 3px;
             color: #fff;
+            text-align:justify;
         }
-
-
+            .box > i {
+                font-size: 80px;
+                padding: 10px;
+            }
             .box.threed {
                 grid-area: threeD;
                 background-color: rgb(17, 72, 173);
             }
-
-                .box.threed > i {
-                    font-size: 80px;
-                    padding: 10px;
-                }
-
             .box.graphics {
                 grid-area: graphic;
                 background-color: rgb(255, 106, 0);
             }
 
-                .box.graphics > i {
-                    font-size: 80px;
-                    padding: 10px;
-                }
+
 
             .box.website {
                 grid-area: website;
                 background-color: rgb(5, 167, 33);
             }
-             .box.website > i {
-                    font-size: 80px;
-                    padding: 10px;
-                }
+            .position-absolute{
+                position:absolute;
+                bottom:0;
+                right:20px;
+            }
 
-        .underConstruction {
-            margin: 0px auto 0px auto;
-            text-align: center;
-            padding: 100px 0px;
-            font-size: 100px;
-            color: rgb(247, 80, 80);
-        }
+
+       
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -111,8 +101,8 @@
             <img src="Images/1154.png" alt="welcome" height="100%" />
             <div class="welcome_message">
                 <h2 class="welcome">Welcome</h2>
-                <p>We are so glad to welcome you to my new website. Here we are providing services like <a href="#">Graphic Designing</a> , <a href="#">3D Image Rendring</a>, <a href="#">ASP.Net Web Devlopment</a> and <a href="#">Web Designing</a>.</p>
-                <asp:Button ID="btnViewWorks" runat="server" CssClass="btn btn-default btn-md" Text="View Works" />
+                <p>We are so glad to welcome you to our new website. Here we are providing services like <a href="#">Graphic Designing</a> , <a href="#">3D Image Rendring</a>, <a href="#">ASP.Net Web Devlopment</a> and <a href="#">Web Designing</a>.</p>
+                <asp:Button ID="btnViewWorks" runat="server" CssClass="btn btn-default btn-md" Text="View Works" OnClick="btnViewWorks_Click" />
             </div>
         </div>
         <div class="index-0">
@@ -122,23 +112,21 @@
         <div class="box threed">
             <i class="fa fa-cubes"></i>
             <p>Demand of 3d rendring, Concept making and and Product rendring is growing day by day. Because 3D have forms. It is not like painting, drawing, photographs.</p>
-            <asp:Button ID="btnView3d" runat="server" Text="View" CssClass="btn btn-white" />
+            <asp:Button ID="btnView3d" runat="server" Text="View"  CssClass="btn btn-round btn-white position-absolute" />
         </div>
         <div class="box graphics">
             <i class="fa fa-paint-brush"></i>
             <p>Graphic design is the process of visual communication and problem-solving through the use of typography, photography, and illustration </p>
-            <asp:Button ID="btnViewGraphics" runat="server" Text="View" CssClass="btn btn-white" />
+            <asp:Button ID="btnViewGraphics" runat="server" Text="View" CssClass="btn btn-round btn-white position-absolute" />
 
         </div>
         <div class="box website">
             <i class="fa fa-globe"></i>
             <p>Since the start of the 21st century the web has become more and more integrated into peoples lives. As this has happened the technology of the web has also moved on. There have also been significant changes in the way people use and access the web, and this has changed how sites are designed. </p>
-            <asp:Button ID="btnViewWebDesigns" runat="server" Text="View" CssClass="btn btn-white" />
+            <asp:Button ID="btnViewWebDesigns" runat="server" Text="View" CssClass="btn btn-round btn-white position-absolute" />
         </div>
     </div>
-    <div class="underConstruction">
-        <h5>We are under construction!</h5>
-    </div>
+  
 
 
 </asp:Content>
