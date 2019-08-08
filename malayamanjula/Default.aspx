@@ -109,7 +109,7 @@
         </div>
     </div>
     <div id="designs" class="designs">
-        <div class="box threed">
+        <div class="box threed" >
             <i class="fa fa-cubes"></i>
             <p>Demand of 3d rendring, Concept making and and Product rendring is growing day by day. Because 3D have forms. It is not like painting, drawing, photographs.</p>
             <asp:Button ID="btnView3d" runat="server" Text="View"  CssClass="btn btn-round btn-white position-absolute" />
@@ -126,7 +126,12 @@
             <asp:Button ID="btnViewWebDesigns" runat="server" Text="View" CssClass="btn btn-round btn-white position-absolute" />
         </div>
     </div>
-  
+    <script>
+        function redirect(path) {
+            console.log(path);
+            window.open(path);
+        }
+    </script>
 
 
 </asp:Content>
